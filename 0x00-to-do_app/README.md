@@ -8,26 +8,6 @@ A simple to-do list application to help you manage your tasks efficiently.
 - Mark tasks as complete or incomplete
 - Filter tasks by status
 
-## Getting Started
-
-1. Clone the repository:
-
-```bash
-git clone https://github.com/Omartalat/node_projects.git
-```
-
-2. Install dependencies:
-
-```bash
-npm install
-```
-
-3. Start the app:
-
-```bash
-npm start
-```
-
 ## Usage
 
 - Add a new task using the input field.
