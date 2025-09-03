@@ -20,4 +20,16 @@ db.serialize(() => {
   db.run(sql);
 });
 
+// Promisify db.get and db.run for async/await usage
+const { promisify } = require("util");
+db.get = promisify(db.get.bind(db));
+db.run = function (sql, params) {
+  return new Promise((resolve, reject) => {
+    this.__proto__.run.call(this, sql, params, function (err) {
+      if (err) reject(err);
+      else resolve(this);
+    });
+  });
+};
+
 module.exports = db;
