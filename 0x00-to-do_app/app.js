@@ -37,7 +37,7 @@ app.delete("/todos/:id", (req, res) => {
   res.json(todo);
 });
 
-const PORT = 8000;
+const PORT = 8080;
 app.listen(PORT, () => {
   console.log(`Server is running on http://localhost:${PORT}`);
 });
